@@ -18,11 +18,11 @@ def minmax(l):
     """
     Cette fonction rÃ©cursive retourne le minmax de la liste passÃ©e en argument.
     """
-        if type(l[0])==int:
-            maxi.append(max(l))
-        else:
-            for i in l:
-                minmax(i)
+    if type(l[0])==int:
+        maxi.append(max(l))
+    else:
+        for i in l:
+            minmax(i)
 
 if __name__=="__main__":
         if len(sys.argv)==1:

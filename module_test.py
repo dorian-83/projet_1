@@ -6,9 +6,9 @@ import re sys
 def arguments():                      #programme qui décide ce qui se passera en fonction du nombre d'arguments que l'on met
 	if len(sys.argv)==0
 		
-	elif nom de fichier donné:
+	#elif nom de fichier donné:
 		
-	else la liste qu'on voudra traiter
+	#else la liste qu'on voudra traiter
 
 
 
