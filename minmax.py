@@ -2,6 +2,7 @@
 import sys
 import re
 from module_test import construire
+from module_test import build
 
 """
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
@@ -28,28 +29,6 @@ def mklist():
         l.append(int(lline[i]))   
         i+=1
 
-def build(l0):
-    """
-    Cette fonction construit la liste correspondant Ã  sa reprÃ©sentation chaine de caractÃ¨re fourni en argument.
-    """
-
-    def _build():
-        nonlocal i
-        l = []          # sous-liste courante
-        while True:
-            if l0[i]=="[":   # c'est une sous-liste de listes
-                i+=1
-                if i!=1:             # pour la premiÃ¨re sous-liste, on ne fait rien
-                    l.append(_build())    # sinon on construit cette sous-liste et on la met dans la sous-liste courante
-            elif l0[i]=="]": # c'est la fin de la sous-liste courante,
-                i+=1
-                return l             # on renvoie la sous-liste courante
-            else:                  # c'est une sous-liste d'entiers
-                l.append(int(l0[i]))
-                i+=1
-    i = 0
-    res = _build()
-    return res
 
 def minmax(l):
     """

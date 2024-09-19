@@ -27,6 +27,25 @@ def construire():
     i = 1                              # indice pour parcourir les arguments
     return _construire()
 
+def build(l0):
+    def _build():
+        nonlocal i
+        l = []          # sous-liste courant
+        while True:
+            if l0[i]=="[":   # c'est une sous-liste de listes
+                i+=1
+                if i!=1:             # pour la premiÃ¨re sous-liste, on ne>
+                    l.append(_build())    # sinon on construit cette sous->
+            elif l0[i]=="]": # c'est la fin de la sous-liste courante,
+                i+=1
+                return l             # on renvoie la sous-liste courante
+            else:                  # c'est une sous-liste d'entiers
+                l.append(int(l0[i]))
+                i+=1
+    i = 0
+    res = _build()
+    return res
+
 def mklist():
     i=0
     l = []          # liste courante
