@@ -27,9 +27,22 @@ def construire():
     i = 1                              # indice pour parcourir les arguments
     return _construire()
 
+def mklist():
+    i=0
+    l = []          # liste courante
+    while True:
+        if lline[i]=="[":   # c'est une liste de listes
+            i+=1                 # argument suivant
+            if i!=1:             # pour la premiÃ¨re liste, on ne fait rien
+                l.append(mklist())    # sinon on construit cette sous-liste et on la met dans la liste courante
+        elif lline[i]=="]": # c'est la fin de la liste,
+            i+=1
+            return l             # on renvoie la liste courante
+        else:                  # c'est une liste d'entiers
+            l.append(int(lline[i]))   
+            i+=1
 
-
-#def arguments():                      #programme qui décide ce qui se passera en fonction du nombre d'arguments que l'on met
+#def arguments():                     
 	#if len(sys.argv)==0
 		
 	#elif nom de fichier donné:
@@ -39,12 +52,6 @@ def construire():
 
 
 
-if __name__=="__main__":
-    # programme principal
-    while True:
-        line = input("? ").rstrip("\n").strip()
-        if line=="":
-            break
-        lline = re.split(r' +',line.rstrip("\n"))
+
 
 
