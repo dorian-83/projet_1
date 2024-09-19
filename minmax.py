@@ -1,6 +1,6 @@
 #!/bin/env python3
 import sys
-from module_test.py import construire
+from module_test import construire
 
 """
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
@@ -25,12 +25,16 @@ def minmax(l):
             minmax(i)
 
 if __name__=="__main__":
-        if len(sys.argv)==1:
-            print("dommage")
-        else:
-            l=construire()
-            maxi = []
-            minmax(l)
-            print(min(maxi))
+    if len(sys.argv)==1:         #aucun argument: liste demandée interactivement
+        l=input("Quelle est la liste à traiter ?\n")
+        l=construire()
+        maxi = []
+        minmax(1)
+        print(min(maxi))
+    else:
+        l=construire()
+        maxi = []
+        minmax(l)
+        print(min(maxi))
 
    

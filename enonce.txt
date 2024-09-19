@@ -1,0 +1,18 @@
+Question 1
+Tester ces 3 programmes.
+
+Question 2
+Réécrire ces 3 programmes de façon à ce que chacun d’eux soit capable au choix de récupérer la liste à traiter depuis la ligne de commande, ou bien depuis une saise interactive de l’utilisateur, ou bien de lire des listes à traiter depuis un fichier dont le nom est spécifié sur la ligne de commande.
+
+Plus précisément, le comportement de ces 3 applications devra être le suivant :
+
+si aucun argument est fourni sur la ligne de commande, alors les listes sont demandées interactivement à l’utilisateurs,
+
+sinon, si 1 argument unique est fourni sur la ligne de commande, alors c’est le nom du fichier dans lequel seront lues les listes (1 par ligne),
+
+sinon les arguments fournissent la liste à traiter.
+
+Ecrire ces 3 applications en factorisant le code commun dans un module, de façon à ce qu’il n’y ait pas de code dupliqué entre ces 3 applications.
+
+Question 3
+Fiabiliser le code à l’aide d’assertions judiceuses, et programmer quelques tests.
