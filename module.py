@@ -1,6 +1,7 @@
 #!/bin/env python3
 
-#ce module contiendra 3 fonctions que j'invoquerai dans chaque programme 
+import re
+import sys
 
 def construire():
     def _construire():
@@ -25,4 +26,90 @@ def construire():
                 i+=1
     i = 1                              # indice pour parcourir les arguments
     return _construire()
+
+def build(l0):
+    def _build():
+        nonlocal i
+        l = []          # sous-liste courant
+        while True:
+            if l0[i]=="[":   # c'est une sous-liste de listes
+                i+=1
+                if i!=1:             # pour la premiÃ¨re sous-liste, on ne>
+                    l.append(_build())    # sinon on construit cette sous->
+            elif l0[i]=="]": # c'est la fin de la sous-liste courante,
+                i+=1
+                return l             # on renvoie la sous-liste courante
+            else:                  # c'est une sous-liste d'entiers
+                l.append(int(l0[i]))
+                i+=1
+    i = 0
+    res = _build()
+    return res
+
+"""
+liste demandée interactivement
+"""
+
+"""
+def mklist(L):
+    l=[]
+    for i in range (len(L)-len(l)):
+        if L[i]=="[":
+            if i!=0:
+                l.append(mklist(L))
+        elif L[i]=="]":
+            return l
+        else:
+            l.append(int(L[i]))
+"""
+def mklist(L,i):
+        l = []       # liste courante
+        while True:
+            if L[i]=="[":   # c'est une liste de listes
+                i+=1                 # argument suivant
+                if i!=1:             # pour la premiÃ¨re liste, on ne fait rien
+                    l.append(mklist(L,i)[0])    # sinon on construit cette sous-liste et on la met dans la liste courante
+                    i=i+mklist(L,i)[1]+1
+            elif L[i]=="]": # c'est la fin de la liste,
+                i+=1
+                if llist(l)==False:
+                    return l,len(l)
+                else:
+                    return l
+            else:                  # c'est une liste d'entiers
+                l.append(int(L[i]))
+                i+=1
+                
+def llist(obj):
+    # Vérifie que l'objet est une liste
+    if isinstance(obj, list):
+        # Vérifie que chaque élément de la liste est aussi une liste
+        return all(isinstance(elem, list) for elem in obj)
+    return False  
+
+
+
+
+
+def interact():
+    while True:
+        line = input("? ").rstrip("\n").strip()
+        if line=="":
+            break
+        lline = re.split(r' +',line.rstrip("\n"))
+        i = 0
+
+
+#def arguments():                     
+	#if len(sys.argv)==0
+		
+	#elif nom de fichier donné:
+		
+	#else la liste qu'on voudra traiter
+
+
+
+
+
+
 
