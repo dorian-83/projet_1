@@ -49,3 +49,35 @@ if __name__=="__main__":
         l = mklist()                      # rÃ©cupÃ©ration de la liste
         tri(l)
         print(f"{l=}")
+
+"""
+PROGRAMME PRINCIPAL
+"""
+
+if __name__=="__main__":
+    if len(sys.argv)==1:         #aucun argument: liste demandée interactivement
+        while True:
+            line = input("? ").rstrip("\n").strip()
+            if line=="":
+                break
+            lline = re.split(r' +',line.rstrip("\n"))
+            i = 0
+            l=mklist(lline,0)
+            if llist(l):
+                tri(l)
+                print(f"{l=}")
+            else:
+                l=l[0]
+                tri(l)
+                print(f"{l=}")
+    elif len(sys.argv)==2:
+        f = open(sys.argv[1], "r")
+        for line in f:
+            lline = re.split(r' +',line.rstrip("\n"))
+            l = build(lline)
+            tri(l)
+            print(f"{l=}")
+    else:
+        l=construire()
+        tri(l)
+        print(f"{l=}")
