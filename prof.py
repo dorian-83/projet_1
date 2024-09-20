@@ -12,28 +12,6 @@ from module_test import llist
     ce fichier contenant des listes de type L.
     Il sort la profondeur de chaque liste.
 """
-def build(l0):
-    """
-    Cette fonction construit la liste correspondant Ã  sa reprÃ©sentation chaine de caractÃ¨re fourni en argument.
-    """
-
-    def _build():
-        nonlocal i
-        l = []          # sous-liste courante
-        while True:
-            if l0[i]=="[":   # c'est une sous-liste de listes
-                i+=1                 
-                if i!=1:             # pour la premiÃ¨re sous-liste, on ne fait rien
-                    l.append(_build())    # sinon on construit cette sous-liste et on la met dans la sous-liste courante
-            elif l0[i]=="]": # c'est la fin de la sous-liste courante,
-                i+=1
-                return l             # on renvoie la sous-liste courante
-            else:                  # c'est une sous-liste d'entiers
-                l.append(int(l0[i]))   
-                i+=1
-    i = 0
-    res = _build()
-    return res
 
 def profondeur(l):
     """
