@@ -38,18 +38,6 @@ def mklist(L):
                 l.append(int(lline[i]))   
                 i+=1
 
-if __name__=="__main__":
-    # programme principal
-    while True:
-        line = input("? ").rstrip("\n").strip()
-        if line=="":
-            break
-        lline = re.split(r' +',line.rstrip("\n"))
-        i = 0
-        l = mklist()                      # rÃ©cupÃ©ration de la liste
-        tri(l)
-        print(f"{l=}")
-
 """
 PROGRAMME PRINCIPAL
 """
