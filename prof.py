@@ -1,5 +1,6 @@
 #!/bin/env python3
-import sys, re
+import sys
+import re
 
 """
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
