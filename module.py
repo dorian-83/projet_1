@@ -50,18 +50,6 @@ def build(l0):
 liste demandée interactivement
 """
 
-"""
-def mklist(L):
-    l=[]
-    for i in range (len(L)-len(l)):
-        if L[i]=="[":
-            if i!=0:
-                l.append(mklist(L))
-        elif L[i]=="]":
-            return l
-        else:
-            l.append(int(L[i]))
-"""
 def mklist(L,i):
         l = []       # liste courante
         while True:
@@ -92,22 +80,7 @@ def llist(obj):
 
 
 def interact():
-    while True:
-        line = input("? ").rstrip("\n").strip()
-        if line=="":
-            break
-        lline = re.split(r' +',line.rstrip("\n"))
-        i = 0
-
-
-#def arguments():                     
-	#if len(sys.argv)==0
-		
-	#elif nom de fichier donné:
-		
-	#else la liste qu'on voudra traiter
-
-
+    
 
 
 
