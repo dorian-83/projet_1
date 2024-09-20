@@ -53,18 +53,6 @@ def profondeur(l):
     _profondeur(l,1)
     return(prof)
 
-if __name__=="__main__":
-    # programme principal
-    f = open(sys.argv[1], "r")
-    for line in f:
-        lline = re.split(r' +',line.rstrip("\n"))
-        l = build(lline)                     
-        print(f"{l=}")
-        print(f"{profondeur(l)=}")
-
-
-
-
 """
 PROGRAMME PRINCIPAL
 """
