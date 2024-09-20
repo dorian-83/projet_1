@@ -1,10 +1,12 @@
 #!/bin/env python3
 import sys
 import re
-from module_test import construire
-from module_test import build
-from module_test import mklist
-from module_test import llist
+from module import construire
+from module import build
+from module import mklist
+from module import llist
+from module import interact
+
 """
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
     Par exemple, l = [ [1,2], [ [2,3,4], [5,4,3,2], [[3,1],[2]]], [0,9] ] est de type L.  
