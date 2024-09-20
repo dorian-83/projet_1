@@ -23,20 +23,6 @@ def tri(l):
     else:
         for i in l:
             tri(i)
-def mklist(L):
-        global i
-        l = []          # liste courante
-        while True:
-            if lline[i]=="[":   # c'est une liste de listes
-                i+=1                 # argument suivant
-                if i!=1:             # pour la premiÃ¨re liste, on ne fait rien
-                    l.append(mklist())    # sinon on construit cette sous-liste et on la met dans la liste courante
-            elif lline[i]=="]": # c'est la fin de la liste,
-                i+=1
-                return l             # on renvoie la liste courante
-            else:                  # c'est une liste d'entiers
-                l.append(int(lline[i]))   
-                i+=1
 
 """
 PROGRAMME PRINCIPAL
