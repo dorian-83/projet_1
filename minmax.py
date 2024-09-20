@@ -3,7 +3,6 @@ import sys
 import re
 from module_test import construire
 from module_test import build
-from module_test import interact
 from module_test import mklist
 from module_test import llist
 """
