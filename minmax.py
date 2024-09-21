@@ -5,7 +5,7 @@ from module import construire
 from module import build
 from module import mklist
 from module import llist
-#from module import interact
+from module import interact
 
 """
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
@@ -37,35 +37,9 @@ PROGRAMME PRINCIPAL
 
 
 if __name__=="__main__":
-    if len(sys.argv)==1:         #aucun argument: liste demandée interactivement
-        while True:
-            line = input("? ").rstrip("\n").strip()
-            if line=="":
-                break
-            lline = re.split(r' +',line.rstrip("\n"))
-            i = 0
-            l=mklist(lline,0)
-            if llist(l):
-                maxi = []
-                minmax(l)
-                print(min(maxi))
-            else:
-                l=l[0]
-                maxi = []
-                minmax(l)
-                print(min(maxi))
-    elif len(sys.argv)==2:
-        f = open(sys.argv[1], "r")
-        for line in f:
-            lline = re.split(r' +',line.rstrip("\n"))
-            l = build(lline)
-            maxi = []
-            minmax(l)
-            print(min(maxi))
-    else:
-        l=construire()
-        maxi = []
-        minmax(l)
-        print(min(maxi))
+    l=interact()
+    maxi = []
+    minmax(l)
+    print(min(maxi))
 
    

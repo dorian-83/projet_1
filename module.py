@@ -60,10 +60,7 @@ def mklist(L,i):
                     i=i+mklist(L,i)[1]+1
             elif L[i]=="]": # c'est la fin de la liste,
                 i+=1
-                if llist(l)==False:
-                    return l,len(l)
-                else:
-                    return l
+                return l,len(l)
             else:                  # c'est une liste d'entiers
                 l.append(int(L[i]))
                 i+=1
@@ -78,9 +75,8 @@ def llist(obj):
 
 
 
-"""
+
 def interact():
-    if __name__=="__main__":
     if len(sys.argv)==1:         #aucun argument: liste demandée interactivement
         while True:
             line = input("? ").rstrip("\n").strip()
@@ -103,4 +99,4 @@ def interact():
     else:
         l=construire()
         return l
-"""
+
