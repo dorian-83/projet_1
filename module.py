@@ -78,7 +78,7 @@ def llist(obj):
 
 
 
-
+"""
 def interact():
     if __name__=="__main__":
     if len(sys.argv)==1:         #aucun argument: liste demandée interactivement
@@ -103,3 +103,4 @@ def interact():
     else:
         l=construire()
         return l
+"""

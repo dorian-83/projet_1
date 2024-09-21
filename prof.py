@@ -5,7 +5,7 @@ from module import construire
 from module import build
 from module import mklist
 from module import llist
-from module import interact
+#from module import interact
 
 """
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
