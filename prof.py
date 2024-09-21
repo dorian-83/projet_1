@@ -38,7 +38,12 @@ PROGRAMME PRINCIPAL
 
 
 if __name__=="__main__":
-    l=interact()
-    print(f"{l=}")
-    print(f"{profondeur(l)=}")
-
+    l,n=interact()
+    if n==0:
+        print(f"{l=}")
+        print(f"{profondeur(l)=}")
+    else:
+        for i in l:
+            L=i
+            print(f"{L=}")
+            print(f"{profondeur(L)=}")

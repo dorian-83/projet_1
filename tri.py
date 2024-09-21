@@ -30,6 +30,12 @@ PROGRAMME PRINCIPAL
 """
 
 if __name__=="__main__":
-    l=interact()
-    tri(l)
-    print(f"{l=}")
+    l,n=interact()
+    if n==0:
+        tri(l)
+        print(f"{l=}")
+    else:
+        for i in l:
+            L=i
+            tri(L)
+            print(f"{L=}")

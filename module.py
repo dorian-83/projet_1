@@ -77,6 +77,7 @@ def llist(obj):
 
 
 def interact():
+    n=0
     if len(sys.argv)==1:         #aucun argument: liste demandée interactivement
         while True:
             line = input("? ").rstrip("\n").strip()
@@ -86,17 +87,20 @@ def interact():
             i = 0
             l=mklist(lline,0)
             if llist(l):
-                return l
+                return l,n
             else:
                 l=l[0]
-                return l
+                return l,n
     elif len(sys.argv)==2:
         f = open(sys.argv[1], "r")
+        L=list()
         for line in f:
+            n+=1
             lline = re.split(r' +',line.rstrip("\n"))
             l = build(lline)
-            return l
+            L.append(l)
+        return L,n
     else:
         l=construire()
-        return l
+        return l,n
 

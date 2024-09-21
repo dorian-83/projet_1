@@ -37,9 +37,14 @@ PROGRAMME PRINCIPAL
 
 
 if __name__=="__main__":
-    l=interact()
-    maxi = []
-    minmax(l)
-    print(min(maxi))
-
+    l,n=interact()
+    if n==0:
+        maxi = []
+        minmax(l)
+        print(min(maxi))
+    else:
+        for i in l:
+            maxi = []
+            minmax(i)
+            print(min(maxi))
    
