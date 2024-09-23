@@ -42,8 +42,10 @@ if __name__=="__main__":
     if n==0:
         print(f"{l=}")
         print(f"{profondeur(l)=}")
+        assert profondeur(l)>0,"la profondeur est négative"
     else:
         for i in l:
             L=i
             print(f"{L=}")
             print(f"{profondeur(L)=}")
+            assert profondeur(l)>0,"la profondeur est négative"

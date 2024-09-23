@@ -99,7 +99,10 @@ def interact():
             lline = re.split(r' +',line.rstrip("\n"))
             l = build(lline)
             L.append(l)
-        return L,n
+        if L==[]:
+            return L,-1
+        else:
+            return L,n
     else:
         l=construire()
         return l,n
