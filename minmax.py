@@ -11,10 +11,17 @@ from module import interact
     Soit L le type liste dont les Ã©lÃ©ments sont soit tous de type int, soit tous de type L.
     Par exemple, l = [ [1,2], [ [2,3,4], [5,4,3,2], [[3,1],[2]]], [0,9] ] est de type L.  
 
-    Ce programme est appelÃ© avec une liste de type L sur la ligne de commande,
-    et sort le min des max de ses sous-listes.  
+    si aucun argument n'est fourni sur la ligne de commande, alors les listes sont demandées interactivement à l’utilisateurs,
 
-    Avec la liste l ci-dessus, la liste des max est [2, 4, 5, 3, 2, 9] donc le programme sort 2.
+    sinon, si 1 argument unique est fourni sur la ligne de commande, alors c’est le nom du fichier dans lequel seront lues les listes (1 par ligne),
+
+    sinon les arguments fournissent la liste à traiter.
+
+
+    Ce programme donnera le minimum des maximum des listes traitées
+
+
+    
 
 """
 
@@ -49,3 +56,6 @@ if __name__=="__main__":
             minmax(i)
             print(min(maxi))
    
+
+
+
