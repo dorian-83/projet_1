@@ -27,6 +27,7 @@ from module import interact
 
 
 def minmax(l):
+    print(l)
     """
     Cette fonction rÃ©cursive retourne le minmax de la liste passÃ©e en argument.
     """
